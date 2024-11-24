@@ -1,7 +1,19 @@
 export interface Project {
   title: string;
-  stars: number;
+  stargazers: number | undefined;
   description: string;
-  link: string;
+  imageUrl: string;
   tech: string[];
+  link: string;
+  status: string;
+}
+
+export interface Experience {
+  title: string;
+  company: string;
+  year: string;
+  tech: string[];
+  link: string;
+  imageUrl: string;
+  description: string;
 }
