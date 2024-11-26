@@ -11,7 +11,10 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        primary: "#CBE4DE",
+        "background-secondary": "var(--background-secondary)",
+        primary: "var(--text-primary)",
+        secondary: "var(--text-secondary)",
+        body: "var(--text-body)",
       },
     },
   },

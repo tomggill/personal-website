@@ -6,6 +6,7 @@ export interface Project {
   tech: string[];
   link: string;
   status: string;
+  isDimmed: boolean;
 }
 
 export interface Experience {
