@@ -24,7 +24,7 @@ const Projects = () => {
 
   return (
     <section>
-      <p className="pl-16 text-xl font-bold">Projects</p>
+      <p className="pl-16 text-xl font-bold text-primary">Projects</p>
       <div className="flex flex-col items-center max-w-screen-xl mx-auto px-4 gap-6 mt-4">
         {projects.map((project, index) => (
           <div

@@ -32,10 +32,10 @@ const ProjectCard: React.FC<Project> = ({
   return (
     <div
       onClick={handleCardClick}
-      className="group cursor-pointer flex justify-between items-start rounded-lg p-3 px-6 bg-background w-full transition-all duration-300 hover:bg-[#2e3b44] hover:text-[#bef264]"
+      className="group cursor-pointer flex justify-between items-start rounded-lg p-3 px-6 bg-background w-full transition-all duration-300 hover:bg-background-secondary"
     >
       <div className="flex flex-col items-center justify-center w-1/4">
-        <p className="text-sm font-normal text-gray-500">{status}</p>
+        <p className="text-sm font-normal text-gray-600">{status}</p>
         {imageUrl && (
           <div className="w-24 h-24 flex-shrink-0 mb-4">
             <img
@@ -66,15 +66,17 @@ const ProjectHeader: React.FC<{
 }> = ({ title, stargazers, onStarClick }) => (
   <div className="flex justify-between items-center mb-3">
     <div className="flex items-center gap-2">
-      <h3 className="text-xl font-semibold">{title}</h3>
-      <div className="transition-transform duration-300 transform group-hover:translate-x-1 group-hover:-translate-y-1">
+      <h3 className="text-xl font-semibold text-primary transition duration-300 group-hover:text-secondary">
+        {title}
+      </h3>
+      <div className="text-primary transition-transform duration-300 transform group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-secondary">
         <LinkIcon size={14} />
       </div>
     </div>
 
     <div
       onClick={onStarClick}
-      className="flex items-center text-sm text-gray-400 hover:text-[#bef264] transition duration-300 cursor-pointer"
+      className="flex items-center text-sm text-body transition duration-300 hover:text-secondary cursor-pointer"
     >
       <span className="mr-2">{stargazers}</span>
       <StarIcon />
@@ -84,14 +86,14 @@ const ProjectHeader: React.FC<{
 
 const ProjectDescription: React.FC<{ description: string }> = ({
   description,
-}) => <p className="text-sm text-gray-400 mb-3">{description}</p>;
+}) => <p className="text-sm mb-3 text-body">{description}</p>;
 
 const ProjectTechList: React.FC<{ tech: string[] }> = ({ tech }) => (
   <ul className="flex flex-wrap gap-4">
     {tech.map((technology, index) => (
       <li
         key={index}
-        className="bg-opacity-10 bg-[#d9f99d] text-[#bef264] font-bold text-sm px-4 py-1 rounded-xl shadow"
+        className="bg-opacity-10 bg-[#d9f99d] text-secondary font-bold text-sm px-4 py-1 rounded-xl shadow"
       >
         {technology}
       </li>

@@ -30,7 +30,7 @@ const SocialMediaBar = () => {
           href={link.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white no-underline transition-colors duration-300 hover:text-[#bef264]"
+          className="text-primary no-underline transition-colors duration-300 hover:text-secondary"
         >
           {link.icon}
         </a>
